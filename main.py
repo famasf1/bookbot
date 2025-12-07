@@ -11,11 +11,11 @@ def main():
     with open(f"{path_to_book}") as f:
         book_content = f.read()
 
-        num_words = get_number_of_words(book_content)
-        dict_words = get_number_of_times_char_appear(book_content)
-        sort_dict_list = sorted_dict(dict_words)
+        num_words:int = get_number_of_words(book_content)
+        dict_words:dict = get_number_of_times_char_appear(book_content)
+        sort_dict_list:list = sorted_dict(dict_words)
 
-        text = f'''
+        text:str = f'''
             ============ BOOKBOT ============
             Analyzing book found at books/frankenstein.txt...
             ----------- Word Count ----------
@@ -24,8 +24,8 @@ def main():
         '''
 
         for i in sort_dict_list:
-            char = i["char"]
-            num = i["num"]
+            char:str = i["char"]
+            num:int = i["num"]
 
             if char.isalpha() == True:
                 text += f'{char}: {num} \n'

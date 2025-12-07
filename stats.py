@@ -10,7 +10,7 @@ def get_number_of_times_char_appear(word: str):
     for word in split_word:
         split_w = list(word)
         for w in split_w:
-            is_exist = result.get(w)
+            is_exist:bool = result.get(w)
             if is_exist:
                 result[w] += 1
             else:
@@ -22,7 +22,7 @@ def sorted_dict(item_dict: dict):
     result = []
     
     for c, n in item_dict.items():
-        new_dict = {"char": c, "num": n}
+        new_dict:dict = {"char": c, "num": n}
         result.append(new_dict)
 
     result.sort(reverse=True, key=lambda k: k["num"])
